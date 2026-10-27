@@ -1,0 +1,20 @@
+[package]
+name = "solana-native-token-swap"
+version = "0.1.0"
+description = "Native Solana implementation of the token swap AMM program without Anchor"
+edition = "2021"
+license = "Apache-2.0"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+borsh = "0.10"
+solana-program = "1.18"
+spl-token = { version = "4.0", features = ["no-entrypoint"] }
+thiserror = "1.0"
+
+[dev-dependencies]
+solana-program-test = "1.18"
+solana-sdk = "1.18"
+tokio = { version = "1.0", features = ["full"] }
